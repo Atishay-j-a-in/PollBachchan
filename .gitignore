@@ -1,0 +1,86 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build Output
+dist/
+build/
+.next/
+.vercel/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS Specific
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE & Editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.c9/
+*.iml
+*.iws
+*.ipr
+.settings/
+.metals/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.cache/
+.turbo/
+*.bak
+*.tmp
+~$*
+.~lock.*
+
+# Specific to Backend
+Backend/.env
+Backend/node_modules/
+Backend/dist/
+Backend/.bun/
+
+# Specific to Frontend
+Frontend/.env
+Frontend/node_modules/
+Frontend/dist/
+Frontend/build/
+Frontend/.vite/
+Frontend/.cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+mongodb.local
+
+# API Keys & Secrets
+.secret
+secrets.json
+credentials.json
