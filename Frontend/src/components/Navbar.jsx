@@ -1,9 +1,15 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '/logo.png'
 import useAuth from '../hooks/useAuth'
 
-const Navbar = ({ showAuthActions = true }) => {
-  const { isAuthenticated } = useAuth()
+const Navbar = ({ showAuthActions = true, showLogout = false }) => {
+  const { isAuthenticated, logout } = useAuth()
+  const navigate = useNavigate()
+
+  const handleLogout = async () => {
+    await logout()
+    navigate('/login')
+  }
 
   return (
     <header className="relative z-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -40,6 +46,14 @@ const Navbar = ({ showAuthActions = true }) => {
         )}
       </nav>
     ) : null}
+    {showLogout && isAuthenticated && (
+      <button
+        onClick={handleLogout}
+        className="rounded-full border border-[#a9a9a9] px-6 py-3 text-[14px] uppercase tracking-[1px] text-[#a9a9a9] transition hover:-translate-y-0.5 hover:border-white hover:text-white"
+      >
+        Logout
+      </button>
+    )}
     </header>
   )
 }

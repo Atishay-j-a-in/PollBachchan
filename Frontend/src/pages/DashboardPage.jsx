@@ -76,7 +76,7 @@ const DashboardPage = () => {
 
   return (
     <div className="min-h-screen bg-[#050505] px-[clamp(20px,5vw,80px)] py-8 pb-20">
-      <Navbar showAuthActions={false} />
+      <Navbar showAuthActions={false} showLogout={true} />
       <main className="mt-12 flex flex-col gap-8">
         <DashboardHeader />
         
