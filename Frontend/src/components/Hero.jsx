@@ -6,7 +6,7 @@ const HERO_VIDEO_URL =
 const Hero = () => {
   const navigate = useNavigate()
   const { isAuthenticated } = useAuth()
-
+  
   const handleButtonClick = () => {
     if (isAuthenticated) {
       navigate('/create')

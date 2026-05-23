@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import { Route, Routes } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import LoginPage from './pages/LoginPage'
@@ -10,10 +10,16 @@ import AnalyticsPage from './pages/AnalyticsPage'
 import PollThankYouPage from './pages/PollThankYouPage'
 import PollResultsPage from './pages/PollResultsPage'
 import RequireAuth from './components/RequireAuth'
+import { healthCheck } from './api/pollApi'
 
 function App() {
   const [cursor, setCursor] = useState({ x: '50%', y: '50%' })
-
+  useEffect(() => {
+     fetch(`${import.meta.env.VITE_API_URL}/health`)
+    .catch(() => {
+     
+    });
+  }, [])
   return (
     <div
       className="relative"
