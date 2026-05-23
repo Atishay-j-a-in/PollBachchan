@@ -10,7 +10,6 @@ import AnalyticsPage from './pages/AnalyticsPage'
 import PollThankYouPage from './pages/PollThankYouPage'
 import PollResultsPage from './pages/PollResultsPage'
 import RequireAuth from './components/RequireAuth'
-import { healthCheck } from './api/pollApi'
 
 function App() {
   const [cursor, setCursor] = useState({ x: '50%', y: '50%' })
